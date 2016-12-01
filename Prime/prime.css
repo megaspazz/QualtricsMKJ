@@ -1,0 +1,58 @@
+/* Place your CSS here */
+
+.instructions {
+	font-size: 12pt;
+}
+
+.persistentInstructions {
+	text-align: center;
+}
+
+.outro {
+	display: none;
+}
+
+.leftAlign {
+	float: left;
+	clear: left;
+}
+
+.riteAlign {
+	float: right;
+	clear: right;
+}
+
+.testArea {
+	display: none;
+}
+
+.keyHeader {
+	font-size: 24pt;
+	font-weight: bold;
+}
+
+.keyDescription {
+	font-size: 18pt;
+}
+
+.displayTextWrapper {
+	clear: both;
+	height: 72px;
+	vertical-align: middle;
+}
+
+.displayText {
+	font-size: 48pt;
+	text-align: center;
+}
+
+.wrong {
+	clear: both;
+	text-align: center;
+	font-size: 36pt;
+	visibility: hidden;
+}
+
+.colorWrong {
+	color: Red;
+}

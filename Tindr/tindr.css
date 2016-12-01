@@ -1,0 +1,67 @@
+/* Place your CSS here */
+
+.loadingMessage {
+	text-align: center;
+	font-size: 24pt;	
+}
+
+.instructions {
+	font-size: 12pt;
+	display: none;	
+}
+
+.outro {
+	font-size: 12pt;
+	display: none;	
+}
+
+.leftAlign {
+	float: left;
+	clear: left;
+}
+
+.riteAlign {
+	float: right;
+	clear: right;
+}
+
+.dislike {
+	background-image: url("http://i.imgur.com/L57nuxY.png");
+}
+
+.like {
+	background-image: url("http://i.imgur.com/b8HvqXN.png");
+}
+
+.tindrBtn {
+	background-size: cover;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+.tindrBtnLbl {
+	font-size: 10pt;
+}
+
+.profileArea {
+	text-align: center;
+	display: none;
+}
+
+.profilePicture {
+	height: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+}
+
+.profileName {
+	font-size: 24pt;	
+	margin: 24px 0 16px 0;
+}
+
+.profileDesc {
+	font-size: 16pt;
+	margin: 16px;
+}
