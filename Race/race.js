@@ -11,6 +11,9 @@ Qualtrics.SurveyEngine.addOnload(function()
 		IMAGE: "IMAGE"
 	}
 	
+	var topColorName = "green";
+	var botColorName = "blue";
+	
 	var flashTime = 320;
 	
 	var spaceKey = 32;     // Space bar key
@@ -38,6 +41,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 	var riteCatTop = getByClass("riteCatTop");
 	var riteCatBot = getByClass("riteCatBot");
 	
+	var promptTableElt = getByClass("promptTable");
 	var promptElt = getByClass("prompt");
 	var wrongElt = getByClass("wrong");
 	
@@ -219,17 +223,47 @@ Qualtrics.SurveyEngine.addOnload(function()
 		return elts ? elts[0] : null;
 	}
 	
+	function getClassList(elt) {
+		return elt.className.split(/\s+/g);
+	}
+	
+	function setClassList(elt, classes) {
+		elt.className = classes.join(" ");
+	}
+	
+	function addClass(elt, classToAdd) {
+		var classes = getClassList(elt);
+		for (var i = 0; i < classes.length; i++) {
+			if (classes[i] === classToAdd) {
+				return elt;
+			}
+		}
+		classes.push(classToAdd);
+		setClassList(elt, classes);
+		return elt;
+	}
+	
+	function removeClass(elt, classToRemove) {
+		var classes = getClassList(elt);
+		var filteredClasses = [];
+		for (var i = 0; i < classes.length; i++) {
+			if (classes[i] !== classToRemove) {
+				filteredClasses.push(classes[i]);
+			}
+		}
+		setClassList(elt, filteredClasses);
+		return elt;
+	}
+	
 	function show(elt) {
 		if (elt) {
-			elt.style.display = "inherit";
-			//$(elt).removeClass("hidden");
+			removeClass(elt, "hidden");
 		}
 	}
 	
 	function hide(elt) {
 		if (elt) {
-			elt.style.display = "none";
-			//$(elt).addClass("hidden");
+			addClass(elt, "hidden");
 		}
 	}
 	
@@ -370,19 +404,19 @@ Qualtrics.SurveyEngine.addOnload(function()
 				initializeTrial(null, null, state.botLeft, state.botRite, 4, "<div><strong>See above, the categories have changed.</strong>  The items for sorting have changed as well.  The rules, however, are the same.</div><br /><div>When the items belong to a category on the left, press the <strong>E</strong> key; when the item belongs to a category on the right, press the <strong>I</strong> key.  Items belong to only one category.  An <strong class=\"colorWrong\">X</strong> appears after an error - fix the error by hitting the other key.  <strong>GO AS FAST AS YOU CAN.</strong></div>");
 				return true;
 			case 3:
-				initializeTrial(state.topLeft, state.topRite, state.botLeft, state.botRite, 4, "<div><strong>See above, the four categories you saw separately now appear together.</strong>  Remember, each item belongs to only one gruop.  For example, if the categories <strong>flower</strong> and <strong>good</strong> appeared on separate sides above - pictures or words meaning <strong>flower</strong> would go in the <strong>flower</strong> category, not the <strong>good</strong>category.</div><br /><div>The <strong class=\"colorCatTop\">white</strong> and <strong class=\"colorCatBot\">green</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct errors by hitting the other key.</div>");
+				initializeTrial(state.topLeft, state.topRite, state.botLeft, state.botRite, 4, "<div><strong>See above, the four categories you saw separately now appear together.</strong>  Remember, each item belongs to only one gruop.  For example, if the categories <strong>flower</strong> and <strong>good</strong> appeared on separate sides above - pictures or words meaning <strong>flower</strong> would go in the <strong>flower</strong> category, not the <strong>good</strong>category.</div><br /><div>The <strong class=\"colorCatTop\">" + topColorName + "</strong> and <strong class=\"colorCatBot\">" + botColorName + "</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct errors by hitting the other key.</div>");
 				return true;
 			case 4:
-				initializeTrial(state.topLeft, state.topRite, state.botLeft, state.botRite, 8, "<div><strong>Sort the same four categories again.</strong>  Remember to go as fast as you can while making as few mistakes as possible.</div><br /><div>The <strong class=\"colorCatTop\">white</strong> and <strong class=\"colorCatBot\">green</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct the errors by hitting the other key.</div>");
+				initializeTrial(state.topLeft, state.topRite, state.botLeft, state.botRite, 8, "<div><strong>Sort the same four categories again.</strong>  Remember to go as fast as you can while making as few mistakes as possible.</div><br /><div>The <strong class=\"colorCatTop\">" + topColorName + "</strong> and <strong class=\"colorCatBot\">" + botColorName + "</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct the errors by hitting the other key.</div>");
 				return true;
 			case 5:
 				initializeTrial(state.topRite, state.topLeft, null, null, 4, "<div><strong>Notice above, there are only two categories and they have switched positions.</strong>  The concept that was previously on the left is now on the right, and the concept that was on the right is now on the left.  Practice this new configuration.<div><br /><div>Use the <strong>E</strong> and <strong>I</strong> keys to categorize items left and right, and correct errors by hitting the other key.</div>");
 				return true;
 			case 6:
-				initializeTrial(state.topRite, state.topLeft, state.botLeft, state.botRite, 4, "<div><strong>See above, the four categories now appear together in a new configuration.</strong>  Remember, each item belongs to only one group.</div><br /><div>The <strong class=\"colorCatTop\">white</strong> and <strong class=\"colorCatBot\">green</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct errors by hitting the other key.</div>");
+				initializeTrial(state.topRite, state.topLeft, state.botLeft, state.botRite, 4, "<div><strong>See above, the four categories now appear together in a new configuration.</strong>  Remember, each item belongs to only one group.</div><br /><div>The <strong class=\"colorCatTop\">" + topColorName + "</strong> and <strong class=\"colorCatBot\">" + botColorName + "</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct errors by hitting the other key.</div>");
 				return true;
 			case 7:
-				initializeTrial(state.topRite, state.topLeft, state.botLeft, state.botRite, 8, "<div><strong>Sort the same four categories again.</strong>  Remember to go as fast as you can while making as few mistakes as possible.</div><br /><div>The <strong class=\"colorCatTop\">white</strong> and <strong class=\"colorCatBot\">green</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct errors by hitting the other key.</div>");
+				initializeTrial(state.topRite, state.topLeft, state.botLeft, state.botRite, 8, "<div><strong>Sort the same four categories again.</strong>  Remember to go as fast as you can while making as few mistakes as possible.</div><br /><div>The <strong class=\"colorCatTop\">" + topColorName + "</strong> and <strong class=\"colorCatBot\">" + botColorName + "</strong> labels and items may help to identify the appropriate category.  Use the <strong>E</strong> and <strong>I</strong> keys to categorize items into the four groups <strong>left</strong> and <strong>right</strong>, and correct errors by hitting the other key.</div>");
 				return true;
 			default:
 				return false;
@@ -444,6 +478,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 		trialInstrElt.innerHTML = instrHTML;
 		
 		show(instrElt);
+		hide(promptTableElt);
 		hide(promptElt);
 		hide(wrongElt);
 	}
@@ -469,6 +504,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 			if (index < 0) {
 				if (key === spaceKey) {
 					hide(instrElt);
+					show(promptTableElt);
 					showNextQuestion();	
 				}
 			} else if (index < prompts.length) {

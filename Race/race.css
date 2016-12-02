@@ -1,7 +1,7 @@
 /* Place your CSS here */
 
 .questionContainer {
-	height: 750px;
+	height: 540px;
 	padding: 12px;
 	color: white;
 	background-color: Black;
@@ -12,10 +12,14 @@
 }
 
 .instructions {
-	margin: 12px;
+	margin: 40px 12px 12px 12px;
 	font-size: 12pt;
 	clear: both;
-	display: none;
+}
+
+.keyText {
+	font-size: 10pt;
+	margin-bottom: 8px;
 }
 
 .persistentInstructions {
@@ -26,13 +30,10 @@
 	font-size: 16px;
 	text-align: center;
 	clear: both;
-	display: none;
 }
 
 .testArea {
-	/*height: 400px;*/
 	clear: both;
-	display: none;
 }
 
 .catHeader {
@@ -60,11 +61,11 @@
 }
 
 .colorCatTop {
-	color: White;
+	color: LimeGreen;
 }
 
 .colorCatBot {
-	color: LimeGreen;
+	color: Aqua;
 }
 
 .testImage {
@@ -95,7 +96,6 @@
 	clear: both;
 	text-align: center;
 	font-size: 32pt;
-	display: none;
 }
 
 .colorWrong {
