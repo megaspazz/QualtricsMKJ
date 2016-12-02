@@ -119,27 +119,59 @@ Qualtrics.SurveyEngine.addOnload(function()
 		return elts ? elts[0] : null;
 	}
 	
+	function getClassList(elt) {
+		return elt.className.split(/\s+/g);
+	}
+	
+	function setClassList(elt, classes) {
+		elt.className = classes.join(" ");
+	}
+	
+	function addClass(elt, classToAdd) {
+		var classes = getClassList(elt);
+		for (var i = 0; i < classes.length; i++) {
+			if (classes[i] === classToAdd) {
+				return elt;
+			}
+		}
+		classes.push(classToAdd);
+		setClassList(elt, classes);
+		return elt;
+	}
+	
+	function removeClass(elt, classToRemove) {
+		var classes = getClassList(elt);
+		var filteredClasses = [];
+		for (var i = 0; i < classes.length; i++) {
+			if (classes[i] !== classToRemove) {
+				filteredClasses.push(classes[i]);
+			}
+		}
+		setClassList(elt, filteredClasses);
+		return elt;
+	}
+	
 	function show(elt) {
 		if (elt) {
-			elt.style.display = "inherit";	
+			removeClass(elt, "hidden");
 		}
 	}
 	
 	function hide(elt) {
 		if (elt) {
-			elt.style.display = "none";
+			addClass(elt, "hidden");
 		}
 	}
 	
 	function setVisible(elt) {
 		if (elt) {
-			elt.style.visibility = "visible";
+			removeClass(elt, "invisible");
 		}
 	}
 	
 	function setHidden(elt) {
 		if (elt) {
-			elt.style.visibility = "hidden";
+			addClass(elt, "invisible");
 		}
 	}
 	

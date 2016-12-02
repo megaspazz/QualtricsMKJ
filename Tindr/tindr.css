@@ -7,12 +7,10 @@
 
 .instructions {
 	font-size: 12pt;
-	display: none;	
 }
 
 .outro {
 	font-size: 12pt;
-	display: none;	
 }
 
 .leftAlign {
@@ -46,14 +44,12 @@
 
 .profileArea {
 	text-align: center;
-	display: none;
 }
 
 .profilePicture {
 	height: 320px;
 	margin-left: auto;
 	margin-right: auto;
-	display: none;
 }
 
 .profileName {
@@ -64,4 +60,8 @@
 .profileDesc {
 	font-size: 16pt;
 	margin: 16px;
+}
+
+.hidden {
+	display: none;
 }

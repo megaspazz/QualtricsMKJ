@@ -8,10 +8,6 @@
 	text-align: center;
 }
 
-.outro {
-	display: none;
-}
-
 .leftAlign {
 	float: left;
 	clear: left;
@@ -20,10 +16,6 @@
 .riteAlign {
 	float: right;
 	clear: right;
-}
-
-.testArea {
-	display: none;
 }
 
 .keyHeader {
@@ -50,9 +42,16 @@
 	clear: both;
 	text-align: center;
 	font-size: 36pt;
-	visibility: hidden;
 }
 
 .colorWrong {
 	color: Red;
+}
+
+.hidden {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
 }
