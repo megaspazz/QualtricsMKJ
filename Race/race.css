@@ -1,43 +1,95 @@
 /* Place your CSS here */
 
-.questionContainer {
+.race_questionContainer {
 	height: 540px;
 	padding: 12px;
 	color: white;
 	background-color: Black;
 }
 
-.loadingMessage {
+.race_loadingMessage {
 	font-size: 24pt;
 }
 
-.instructions {
+.race_instructions {
 	margin: 40px 12px 12px 12px;
 	font-size: 12pt;
 	clear: both;
 }
 
-.keyText {
+.race_keyText {
 	font-size: 10pt;
 	margin-bottom: 8px;
 }
 
-.persistentInstructions {
+.race_persistentInstructions {
 	text-align: center;
 }
 
-.outro {
+.race_outro {
 	font-size: 16px;
 	text-align: center;
 	clear: both;
 }
 
-.testArea {
+.race_testArea {
 	clear: both;
 }
 
-.catHeader {
+.race_catHeader {
 	height: 160px;
+}
+
+.race_or {
+	font-size: 16pt;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.race_catLabel {
+	font-size: 24pt;	
+}
+
+.race_colorCatTop {
+	color: LimeGreen;
+}
+
+.race_colorCatBot {
+	color: Aqua;
+}
+
+.race_testImage {
+	max-width: 160px;
+	max-height: 120px;
+	margin: 0;
+}
+
+.race_promptTable {
+	display: table;
+	height: 120px;
+	padding: 32px;
+	margin: 0 auto;
+}
+
+.race_promptCell {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 auto;
+}
+
+.race_prompt {
+    text-align: center;
+	font-size: 32pt;
+}
+
+.race_wrong {
+	clear: both;
+	text-align: center;
+	font-size: 32pt;
+}
+
+.race_colorWrong {
+	color: Red;
 }
 
 .leftAlign {
@@ -48,58 +100,6 @@
 .riteAlign {
 	float: right;
 	clear: right;
-}
-
-.or {
-	font-size: 16pt;
-	margin-top: 12px;
-	margin-bottom: 12px;
-}
-
-.catLabel {
-	font-size: 24pt;	
-}
-
-.colorCatTop {
-	color: LimeGreen;
-}
-
-.colorCatBot {
-	color: Aqua;
-}
-
-.testImage {
-	max-width: 160px;
-	max-height: 120px;
-	margin: 0;
-}
-
-.promptTable {
-	display: table;
-	height: 120px;
-	padding: 32px;
-	margin: 0 auto;
-}
-
-.promptCell {
-	display: table-cell;
-	vertical-align: middle;
-	margin: 0 auto;
-}
-
-.prompt {
-    text-align: center;
-	font-size: 32pt;
-}
-
-.wrong {
-	clear: both;
-	text-align: center;
-	font-size: 32pt;
-}
-
-.colorWrong {
-	color: Red;
 }
 
 .hidden {

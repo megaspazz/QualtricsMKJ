@@ -1,11 +1,37 @@
 /* Place your CSS here */
 
-.instructions {
+.prime_instructions {
 	font-size: 12pt;
 }
 
-.persistentInstructions {
+.prime_keyHeader {
+	font-size: 24pt;
+	font-weight: bold;
+}
+
+.prime_keyDescription {
+	font-size: 18pt;
+}
+
+.prime_displayTextWrapper {
+	clear: both;
+	height: 72px;
+	vertical-align: middle;
+}
+
+.prime_displayText {
+	font-size: 48pt;
 	text-align: center;
+}
+
+.prime_wrong {
+	clear: both;
+	text-align: center;
+	font-size: 36pt;
+}
+
+.prime_colorWrong {
+	color: Red;
 }
 
 .leftAlign {
@@ -16,36 +42,6 @@
 .riteAlign {
 	float: right;
 	clear: right;
-}
-
-.keyHeader {
-	font-size: 24pt;
-	font-weight: bold;
-}
-
-.keyDescription {
-	font-size: 18pt;
-}
-
-.displayTextWrapper {
-	clear: both;
-	height: 72px;
-	vertical-align: middle;
-}
-
-.displayText {
-	font-size: 48pt;
-	text-align: center;
-}
-
-.wrong {
-	clear: both;
-	text-align: center;
-	font-size: 36pt;
-}
-
-.colorWrong {
-	color: Red;
 }
 
 .hidden {

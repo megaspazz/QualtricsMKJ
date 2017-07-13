@@ -1,16 +1,55 @@
 /* Place your CSS here */
 
-.loadingMessage {
+.tindr_loadingMessage {
 	text-align: center;
 	font-size: 24pt;	
 }
 
-.instructions {
+.tindr_instructions {
 	font-size: 12pt;
 }
 
-.outro {
+.tindr_outro {
 	font-size: 12pt;
+}
+
+.tindr_dislike {
+	background-image: url("http://i.imgur.com/L57nuxY.png");
+}
+
+.tindr_like {
+	background-image: url("http://i.imgur.com/b8HvqXN.png");
+}
+
+.tindr_btn {
+	background-size: cover;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+.tindr_btnLbl {
+	font-size: 10pt;
+}
+
+.tindr_profileArea {
+	text-align: center;
+}
+
+.tindr_profilePicture {
+	height: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tindr_profileName {
+	font-size: 24pt;	
+	margin: 24px 0 16px 0;
+}
+
+.tindr_profileDesc {
+	font-size: 16pt;
+	margin: 16px;
 }
 
 .leftAlign {
@@ -21,45 +60,6 @@
 .riteAlign {
 	float: right;
 	clear: right;
-}
-
-.dislike {
-	background-image: url("http://i.imgur.com/L57nuxY.png");
-}
-
-.like {
-	background-image: url("http://i.imgur.com/b8HvqXN.png");
-}
-
-.tindrBtn {
-	background-size: cover;
-	margin: 10px;
-	width: 100px;
-	height: 100px;
-}
-
-.tindrBtnLbl {
-	font-size: 10pt;
-}
-
-.profileArea {
-	text-align: center;
-}
-
-.profilePicture {
-	height: 320px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.profileName {
-	font-size: 24pt;	
-	margin: 24px 0 16px 0;
-}
-
-.profileDesc {
-	font-size: 16pt;
-	margin: 16px;
 }
 
 .hidden {

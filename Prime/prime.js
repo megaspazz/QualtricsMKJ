@@ -21,13 +21,13 @@ Qualtrics.SurveyEngine.addOnload(function()
 	var inputID = "QR~" + this.questionId;
 	var inputElt = $(inputID);
 	
-	var loadingElt = getByClass("loadingMessage");
-	var instrElt = getByClass("instructions");
-	var outroElt = getByClass("outro");
+	var loadingElt = getByClass("prime_loadingMessage");
+	var instrElt = getByClass("prime_instructions");
+	var outroElt = getByClass("prime_outro");
 	
-	var testAreaElt = getByClass("testArea");
-	var displayTextElt = getByClass("displayText");
-	var wrongElt = getByClass("wrong");
+	var testAreaElt = getByClass("prime_testArea");
+	var displayTextElt = getByClass("prime_displayText");
+	var wrongElt = getByClass("prime_wrong");
 	
 	// STUDY-SPECIFIC CONSTANTS HERE ================
 	

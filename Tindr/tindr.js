@@ -13,14 +13,14 @@ Qualtrics.SurveyEngine.addOnload(function()
 	var inputID = "QR~" + this.questionId;
 	var inputElt = $(inputID);
 	
-	var loadingElt = getByClass("loadingMessage");
-	var instrElt = getByClass("instructions");
-	var outroElt = getByClass("outro");
+	var loadingElt = getByClass("tindr_loadingMessage");
+	var instrElt = getByClass("tindr_instructions");
+	var outroElt = getByClass("tindr_outro");
 	
-	var profileElt = getByClass("profileArea");
-	var picsElt = getByClass("profilePictures");
-	var nameElt = getByClass("profileName");
-	var descElt = getByClass("profileDesc");
+	var profileElt = getByClass("tindr_profileArea");
+	var picsElt = getByClass("tindr_profilePictures");
+	var nameElt = getByClass("tindr_profileName");
+	var descElt = getByClass("tindr_profileDesc");
 	
 	// USER-DEFINED PARAMETERS HERE =================
 	
@@ -134,7 +134,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 	function preloadProfilePictures() {
 		for (var i = 0; i < profiles.length; i++) {
 			var img = document.createElement("img");
-			img.className = "profilePicture hidden";
+			img.className = "tindr_profilePicture hidden";
 			img.src = profiles[i].url;
 			picsElt.appendChild(img);
 			img.onload = imageLoaded;
